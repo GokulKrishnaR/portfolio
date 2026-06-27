@@ -108,16 +108,31 @@ projects: [
 
 ---
 
-## 📬 Contact Form Configuration
+## 📬 Contact Form & API Key Configuration
 
-To route form messages to your personal inbox:
-1. Go to [Web3Forms](https://web3forms.com/) and register a free account using your email.
-2. Get your `Access Key`.
-3. Open [index.html](index.html) and locate the hidden input field inside the `<form>` element:
-   ```html
-   <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+To keep your Web3Forms `access_key` secure and hidden from public Git history:
+
+### 1. Local Development Setup
+1. Create a `config.js` file in your root folder (this file is already added to `.gitignore` and won't be pushed):
+   ```javascript
+   const CONFIG = {
+       WEB3FORMS_ACCESS_KEY: "YOUR_WEB3FORMS_ACCESS_KEY"
+   };
    ```
-4. Replace `YOUR_ACCESS_KEY_HERE` with your Web3Forms access key.
+2. The site will automatically read this key and bind it to the contact form when running locally.
+
+### 2. GitHub Pages Setup (Secure Deployment)
+To make sure the form works on the live site without committing your key:
+1. Go to your repository settings on GitHub ➔ **Settings** ➔ **Secrets and variables** ➔ **Actions**.
+2. Click **New repository secret**.
+3. Add the secret:
+   - **Name**: `WEB3FORMS_KEY`
+   - **Value**: `YOUR_WEB3FORMS_ACCESS_KEY`
+4. Go to **Settings** ➔ **Pages**.
+5. Under **Build and deployment** ➔ **Source**, change the dropdown selection from **Deploy from a branch** to **GitHub Actions**.
+
+Whenever you push code to `main`, the GitHub Actions workflow will build the site, securely inject the key from your secrets, and deploy it to GitHub Pages.
+
 
 ---
 
