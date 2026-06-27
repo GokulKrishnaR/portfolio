@@ -1,306 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gokul Krishna R | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="assets/logo.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gokul Krishna R - Personal Portfolio. MSc Computer Science (Data Science), AI Developer, Data Analyst, and ML Enthusiast.">
+    <title>Gokul Krishna R | Portfolio</title>
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.svg">
+    
+    <!-- Google Fonts: Inter and Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
-
 <body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Ambient Glow Effects -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
 
-<div class="background"></div>
+    <!-- Navigation Bar -->
+    <header id="navbar">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#hero" id="nav-logo-link"><span id="logo-text">GKR</span></a>
+            </div>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-nav-toggle" aria-controls="nav-menu" aria-expanded="false" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <ul id="nav-menu" class="nav-links">
+                <li><a href="#about" class="nav-link active">About</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge reveal" id="hero-badge-container">
+                    <span class="badge-dot"></span>
+                    <span id="hero-badge-text">Available for Opportunities</span>
+                </div>
+                <h1 class="reveal">Hi, I'm <span class="gradient-text" id="hero-name">Gokul Krishna R</span></h1>
+                <h2 class="reveal"><span id="typing-text"></span><span class="cursor">&nbsp;</span></h2>
+                <p class="hero-tagline reveal" id="hero-tagline-para"></p>
+                
+                <div class="hero-actions reveal" id="hero-actions-container">
+                    <a href="#projects" class="btn btn-primary" id="btn-view-projects">
+                        View Projects <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="assets/resume.pdf" download class="btn btn-secondary" id="btn-download-resume">
+                        Download CV <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                
+                <div class="social-links reveal" id="hero-socials">
+                    <!-- Links populated dynamically -->
+                </div>
+            </div>
+            
+            <div class="scroll-indicator" id="scroll-prompt">
+                <a href="#about" aria-label="Scroll Down">
+                    <span class="mouse-icon">
+                        <span class="wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
 
-<div class="logo"><a href="https://gokulkrishnar.github.io/portfolio/">GKR</a></div>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Introduction</span>
+                    <h2>About Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-card glass reveal" id="about-card-left">
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <h3>Passionate Developer & Researcher</h3>
+                        <p id="about-bio"></p>
+                    </div>
+                    
+                    <div class="stats-container reveal" id="about-stats-right">
+                        <div class="stat-card glass">
+                            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="stat-number">MSc</div>
+                            <div class="stat-label">Computer Science Student</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Core Projects</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-icon"><i class="fas fa-diagram-project"></i></div>
+                            <div class="stat-number">AI/ML</div>
+                            <div class="stat-label">Research Focus</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-icon"><i class="fas fa-earth-americas"></i></div>
+                            <div class="stat-number">Open</div>
+                            <div class="stat-label">Source Contributor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+        <!-- Journey Section (Education & Experience combined) -->
+        <section id="journey" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Timeline</span>
+                    <h2>My Journey</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="journey-grid">
+                    <!-- Experience Timeline -->
+                    <div class="timeline-column reveal">
+                        <div class="timeline-title-bar">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Experience</h3>
+                        </div>
+                        <div class="timeline" id="experience-timeline">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Education Timeline -->
+                    <div class="timeline-column reveal">
+                        <div class="timeline-title-bar">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="timeline" id="education-timeline">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</nav>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Expertise</span>
+                    <h2>Technical Skills</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="skills-grid" id="skills-categories-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
 
-<section class="hero">
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Works</span>
+                    <h2>Featured Projects</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <!-- Filter Tabs -->
+                <div class="filter-tabs reveal" id="project-filter-tabs">
+                    <!-- Populated dynamically -->
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projects-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
 
-<div class="hero-content">
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="subtitle">Get In Touch</span>
+                    <h2>Contact Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info glass reveal" id="contact-info-card">
+                        <h3>Let's Collaborate</h3>
+                        <p>I am always looking for interesting projects, research collaborations, or internship opportunities in AI, ML, or Data Science. Drop me a line, and let's start a conversation!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:gokulkrishnar04@gmail.com" id="contact-email-link">gokulkrishnar04@gmail.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p id="contact-location-text">Kochi, Kerala, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-socials" id="contact-socials-container">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container glass reveal" id="contact-form-card">
+                        <form id="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Let's build something awesome together..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit-form">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                            
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<h1>Hi, I'm <span>Gokul Krishna R</span></h1>
-
-<h2 id="typing"></h2>
-
-<p>
-MSc Computer Science (Data Science) • AI Developer • Data Analyst • ML Enthusiast
-</p>
-
-<div class="hero-buttons">
-
-<a href="#projects" class="btn">
-Projects
-</a>
-
-<a href="assets/resume.pdf" download class="btn secondary">
-Download Resume
-</a>
-
-</div>
-
-<div class="socials">
-
-<a href="https://github.com/GokulKrishnaR" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/GokulKrishnaR04" target="_blank">
-<i class="fab fa-linkedin"></i>
-<a href="mailto:gokulkrishnar04@gmail.com">
-    <i class="fas fa-envelope"></i>
-</a>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="section" data-aos="fade-up">
-
-<h2>About Me</h2>
-
-<div class="glass">
-
-<p>
-I am currently pursuing MSc Computer Science with specialization in Data Science at CUSAT.
-
-My interests include Machine Learning, Deep Learning, Federated Learning, Machine Unlearning, Data Analytics, NLP and AI applications.
-
-I enjoy building intelligent systems and solving real-world problems through data-driven solutions.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- Education -->
-
-<section id="education" class="section">
-
-    <h2>Education</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-card">
-
-            <h3>Cochin University of Science and Technology (CUSAT)</h3>
-
-            <p>MSc Computer Science (Data Science)</p>
-
-            <span>2025 – 2027</span>
-
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">GKR</span>
+                <p>Building intelligent systems and data-driven solutions.</p>
+            </div>
+            
+            <div class="footer-line"></div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Gokul Krishna R. All rights reserved.</p>
+                <a href="#hero" class="back-to-top" id="btn-back-to-top" aria-label="Back to Top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
         </div>
-
-        <div class="timeline-card">
-
-            <h3>Sacred Heart College</h3>
-
-            <p>BSc Computer Applications</p>
-
-            <span>2022 – 2025</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Experience -->
-
-<section id="experience" class="section">
-
-    <h2>Experience</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-card">
-
-            <h3>IBM SkillsBuild</h3>
-
-            <p>Data Analytics Intern</p>
-
-            <span>December 2024</span>
-
-        </div>
-
-        <div class="timeline-card">
-
-            <h3>Klickwents Infosolutions</h3>
-
-            <p>Python Intern</p>
-
-            <span>May 2024</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="skills" class="section">
-
-    <h2>Skills</h2>
-
-    <div class="skills-container">
-
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">C</span>
-        <span class="skill-tag">C++</span>
-        <span class="skill-tag">SQL</span>
-
-        <span class="skill-tag">TensorFlow</span>
-        <span class="skill-tag">PyTorch</span>
-        <span class="skill-tag">Scikit-Learn</span>
-
-        <span class="skill-tag">Pandas</span>
-        <span class="skill-tag">NumPy</span>
-        <span class="skill-tag">Matplotlib</span>
-
-        <span class="skill-tag">Machine Learning</span>
-        <span class="skill-tag">Deep Learning</span>
-        <span class="skill-tag">Federated Learning</span>
-
-        <span class="skill-tag">Machine Unlearning</span>
-        <span class="skill-tag">NLP</span>
-        <span class="skill-tag">LLMs</span>
-
-        <span class="skill-tag">Django</span>
-        <span class="skill-tag">Gradio</span>
-
-        <span class="skill-tag">Data Analytics</span>
-        <span class="skill-tag">Feature Engineering</span>
-
-    </div>
-
-</section>
-
-
-<section id="projects" class="section">
-
-<h2>Projects</h2>
-
-<div class="projects-grid">
-
-<div class="card">
-<h3>Federated Learning & Machine Unlearning</h3>
-<p>
-Implemented Gradient Ascent, NG+, Loss-NG+ and Fisher Forgetting on MNIST and CIFAR.
-</p>
-</div>
-
-<div class="card">
-<h3>Auto Traffic</h3>
-<p>
-Traffic Sign Recognition System using CNN and TensorFlow.
-</p>
-<a href="https://github.com/GokulKrishnaR/autotraffic-traffic-sign-recognizer" target="_blank">
-GitHub
-</a>
-</div>
-
-<div class="card">
-<h3>AI Resume Builder</h3>
-<p>
-LLM-powered ATS Resume and Portfolio Builder.
-</p>
-<a href="https://github.com/GokulKrishnaR/ai-resume-portfolio-builder" target="_blank">
-GitHub
-</a>
-</div>
-
-<div class="card">
-<h3>Sales Forecasting</h3>
-<p>
-Data Analysis and Predictive Modeling Project.
-</p>
-<a href="https://github.com/GokulKrishnaR/CODSOFT" target="_blank">
-GitHub
-</a>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>GitHub Profile</h2>
-
-<div class="glass github">
-
-<a href="https://github.com/GokulKrishnaR" target="_blank">
-Visit GitHub Profile
-</a>
-
-</div>
-
-</section>
-
-<section id="contact" class="section">
-
-<h2>Contact</h2>
-
-<div class="glass">
-
-<p>Email: 
-<a href="gokulkrishnar04@gmail.com" target="_blank">gokulkrishnar04@gmail.com</a></p>
-
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/GokulKrishnaR04" target="_blank">
-GokulKrishnaR04
-</a>
-</p>
-
-<p>
-GitHub:
-<a href="https://github.com/GokulKrishnaR" target="_blank">
-GokulKrishnaR
-</a>
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>© 2026 Gokul Krishna R</p>
-
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script src="script.js"></script>
-
+    </footer>
+
+    <!-- Portfolio Data Config -->
+    <script src="portfolio-data.js"></script>
+    <!-- Core Script -->
+    <script src="script.js"></script>
 </body>
 </html>
