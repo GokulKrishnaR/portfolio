@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gokul Krishna R - Personal Portfolio. MSc Computer Science (Data Science), AI Developer, Data Analyst, and ML Enthusiast.">
+    <meta name="description"
+        content="Gokul Krishna R - Personal Portfolio. MSc Computer Science (Data Science), AI Developer, Data Analyst, and ML Enthusiast.">
     <title>Gokul Krishna R | Portfolio</title>
-    
+
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo.svg">
-    
+
     <!-- Google Fonts: Inter and Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
+
 <body>
     <!-- Background Canvas for Particles -->
     <canvas id="particles-canvas"></canvas>
-    
+
     <!-- Ambient Glow Effects -->
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
@@ -34,14 +39,15 @@
             <div class="logo">
                 <a href="#hero" id="nav-logo-link"><span id="logo-text">GKR</span></a>
             </div>
-            
+
             <!-- Mobile Menu Toggle Button -->
-            <button class="mobile-nav-toggle" aria-controls="nav-menu" aria-expanded="false" id="menu-toggle" aria-label="Toggle Navigation Menu">
+            <button class="mobile-nav-toggle" aria-controls="nav-menu" aria-expanded="false" id="menu-toggle"
+                aria-label="Toggle Navigation Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            
+
             <ul id="nav-menu" class="nav-links">
                 <li><a href="#about" class="nav-link active">About</a></li>
                 <li><a href="#journey" class="nav-link">Journey</a></li>
@@ -63,7 +69,7 @@
                 <h1 class="reveal">Hi, I'm <span class="gradient-text" id="hero-name">Gokul Krishna R</span></h1>
                 <h2 class="reveal"><span id="typing-text"></span><span class="cursor">&nbsp;</span></h2>
                 <p class="hero-tagline reveal" id="hero-tagline-para"></p>
-                
+
                 <div class="hero-actions reveal" id="hero-actions-container">
                     <a href="#projects" class="btn btn-primary" id="btn-view-projects">
                         View Projects <i class="fas fa-arrow-right"></i>
@@ -72,12 +78,12 @@
                         Download CV <i class="fas fa-download"></i>
                     </a>
                 </div>
-                
+
                 <div class="social-links reveal" id="hero-socials">
                     <!-- Links populated dynamically -->
                 </div>
             </div>
-            
+
             <div class="scroll-indicator" id="scroll-prompt">
                 <a href="#about" aria-label="Scroll Down">
                     <span class="mouse-icon">
@@ -95,7 +101,7 @@
                     <h2>About Me</h2>
                     <div class="header-line"></div>
                 </div>
-                
+
                 <div class="about-grid">
                     <div class="about-card glass reveal" id="about-card-left">
                         <div class="profile-placeholder">
@@ -104,7 +110,7 @@
                         <h3>Passionate Developer & Researcher</h3>
                         <p id="about-bio"></p>
                     </div>
-                    
+
                     <div class="stats-container reveal" id="about-stats-right">
                         <div class="stat-card glass">
                             <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
@@ -139,7 +145,7 @@
                     <h2>My Journey</h2>
                     <div class="header-line"></div>
                 </div>
-                
+
                 <div class="journey-grid">
                     <!-- Experience Timeline -->
                     <div class="timeline-column reveal">
@@ -151,7 +157,7 @@
                             <!-- Populated dynamically -->
                         </div>
                     </div>
-                    
+
                     <!-- Education Timeline -->
                     <div class="timeline-column reveal">
                         <div class="timeline-title-bar">
@@ -174,7 +180,7 @@
                     <h2>Technical Skills</h2>
                     <div class="header-line"></div>
                 </div>
-                
+
                 <div class="skills-grid" id="skills-categories-container">
                     <!-- Populated dynamically -->
                 </div>
@@ -189,12 +195,12 @@
                     <h2>Featured Projects</h2>
                     <div class="header-line"></div>
                 </div>
-                
+
                 <!-- Filter Tabs -->
                 <div class="filter-tabs reveal" id="project-filter-tabs">
                     <!-- Populated dynamically -->
                 </div>
-                
+
                 <!-- Projects Grid -->
                 <div class="projects-grid" id="projects-container">
                     <!-- Populated dynamically -->
@@ -210,21 +216,24 @@
                     <h2>Contact Me</h2>
                     <div class="header-line"></div>
                 </div>
-                
+
                 <div class="contact-grid">
                     <div class="contact-info glass reveal" id="contact-info-card">
                         <h3>Let's Collaborate</h3>
-                        <p>I am always looking for interesting projects, research collaborations, or internship opportunities in AI, ML, or Data Science. Drop me a line, and let's start a conversation!</p>
-                        
+                        <p>I am always looking for interesting projects, research collaborations, or internship
+                            opportunities in AI, ML, or Data Science. Drop me a line, and let's start a conversation!
+                        </p>
+
                         <div class="contact-details">
                             <div class="contact-item">
                                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                                 <div>
                                     <h4>Email</h4>
-                                    <p><a href="mailto:gokulkrishnar04@gmail.com" id="contact-email-link">gokulkrishnar04@gmail.com</a></p>
+                                    <p><a href="mailto:gokulkrishnar04@gmail.com"
+                                            id="contact-email-link">gokulkrishnar04@gmail.com</a></p>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-item">
                                 <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                                 <div>
@@ -233,33 +242,35 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="contact-socials" id="contact-socials-container">
                             <!-- Populated dynamically -->
                         </div>
                     </div>
-                    
+
                     <div class="contact-form-container glass reveal" id="contact-form-card">
-                        <form id="contact-form" action="#" method="POST">
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="057d6eab-c4e0-4856-954d-add3ba0b4da5">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" required placeholder="John Doe">
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="email">Your Email</label>
                                 <input type="email" id="email" name="email" required placeholder="john@example.com">
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Let's build something awesome together..."></textarea>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Let's build something awesome together..."></textarea>
                             </div>
-                            
+
                             <button type="submit" class="btn btn-primary btn-submit" id="btn-submit-form">
                                 Send Message <i class="fas fa-paper-plane"></i>
                             </button>
-                            
+
                             <div id="form-status" class="form-status"></div>
                         </form>
                     </div>
@@ -275,9 +286,9 @@
                 <span class="footer-logo">GKR</span>
                 <p>Building intelligent systems and data-driven solutions.</p>
             </div>
-            
+
             <div class="footer-line"></div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2026</span> Gokul Krishna R. All rights reserved.</p>
                 <a href="#hero" class="back-to-top" id="btn-back-to-top" aria-label="Back to Top">
@@ -292,4 +303,5 @@
     <!-- Core Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
