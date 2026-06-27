@@ -511,6 +511,12 @@ function initContactForm() {
 
     if (!form || !statusDiv) return;
 
+    // Inject Web3Forms access key from the config object if defined
+    const keyInput = document.getElementById("web3forms-key");
+    if (keyInput && typeof CONFIG !== 'undefined') {
+        keyInput.value = CONFIG.WEB3FORMS_ACCESS_KEY;
+    }
+
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
 

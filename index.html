@@ -250,7 +250,7 @@
 
                     <div class="contact-form-container glass reveal" id="contact-form-card">
                         <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="057d6eab-c4e0-4856-954d-add3ba0b4da5">
+                            <input type="hidden" name="access_key" id="web3forms-key" value="">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -298,6 +298,8 @@
         </div>
     </footer>
 
+    <!-- Configuration (API Keys) -->
+    <script src="config.js"></script>
     <!-- Portfolio Data Config -->
     <script src="portfolio-data.js"></script>
     <!-- Core Script -->
